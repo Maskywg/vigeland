@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>維吉蘭雕塑公園：在石雕與無聲掙扎之間，通向人性的深處</title>
+<style>
+  :root{
+    --granite-dark:#232527;
+    --granite:#3a3d40;
+    --granite-mid:#585c5f;
+    --granite-light:#9a9d98;
+    --bronze:#8c7a5c;
+    --bronze-deep:#6b5a3e;
+    --patina:#5f7a6e;
+    --paper:#f2efe8;
+    --ink:#20211f;
+    --ink-soft:#514f49;
+    --line:#d9d4c6;
+    --dusk:#c0673e;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:"Noto Serif TC","PMingLiU","Songti TC",serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.9;
+  }
+
+  .hero{
+    position:relative;
+    min-height:90vh;
+    display:flex;
+    align-items:flex-end;
+    padding:3rem 1.5rem 4rem;
+    background:
+      linear-gradient(180deg, rgba(20,18,14,.15) 0%, rgba(20,18,14,.55) 60%, rgba(20,18,14,.92) 100%),
+      url('images/hero-monolith_20260726_225754.png') center 35%/cover no-repeat;
+    color:#f2efe8;
+  }
+  .hero-inner{max-width:900px; margin:0 auto; width:100%;}
+  .hero .eyebrow{
+    letter-spacing:.35em;
+    font-size:.78rem;
+    text-transform:uppercase;
+    color:#d9cbb0;
+    margin-bottom:1.1rem;
+  }
+  .hero h1{
+    font-size:clamp(2rem, 5vw, 3.3rem);
+    margin:0 0 1rem;
+    font-weight:700;
+    text-shadow:0 3px 16px rgba(0,0,0,.55);
+  }
+  .hero .sub{
+    max-width:640px;
+    margin:0 0 1.6rem;
+    font-size:1.12rem;
+    color:#efe6cf;
+    text-shadow:0 2px 8px rgba(0,0,0,.5);
+    letter-spacing:.03em;
+  }
+  .hero .meta{
+    display:flex;
+    gap:.6rem;
+    flex-wrap:wrap;
+  }
+  .hero .meta span{
+    font-size:.78rem;
+    letter-spacing:.05em;
+    padding:.35rem .8rem;
+    border:1px solid rgba(242,239,232,.45);
+    border-radius:999px;
+    color:#e4dcc8;
+  }
+
+  .wrap{max-width:900px;margin:0 auto;padding:0 1.5rem;}
+
+  .disclaimer{
+    max-width:900px;margin:2rem auto;
+    font-size:.8rem;
+    color:var(--ink-soft);
+    background:#fff;
+    border:1px dashed var(--line);
+    border-radius:8px;
+    padding:1rem 1.3rem;
+  }
+  .disclaimer a{color:var(--bronze-deep);}
+
+  nav.toc{
+    background:var(--granite-dark);
+    border-bottom:1px solid #000;
+    padding:1rem 0;
+    position:sticky; top:0; z-index:10;
+    overflow-x:auto;
+  }
+  nav.toc ul{
+    display:flex;
+    gap:1.6rem;
+    list-style:none;
+    margin:0; padding:0 1.5rem;
+    max-width:900px;
+    margin:0 auto;
+    white-space:nowrap;
+  }
+  nav.toc a{
+    color:#d9cbb0;
+    text-decoration:none;
+    font-size:.88rem;
+    font-weight:600;
+    border-bottom:2px solid transparent;
+    padding-bottom:.3rem;
+  }
+  nav.toc a:hover{border-bottom-color:var(--dusk);}
+
+  section{padding:4.5rem 0; position:relative;}
+  section.alt{
+    background:linear-gradient(180deg, rgba(35,37,39,.96), rgba(35,37,39,.98));
+    color:#f2efe8;
+  }
+  section.alt h2{color:#f2efe8; border-left-color:var(--dusk);}
+  section.alt p{color:#cfcabf;}
+  section.alt strong{color:#f2efe8;}
+  section.alt .tag{color:#d3ab6f;}
+
+  section .wrap > .tag{
+    display:inline-block;
+    font-size:.78rem;
+    letter-spacing:.2em;
+    color:var(--bronze-deep);
+    font-weight:700;
+    margin-bottom:.8rem;
+  }
+  h2{
+    font-size:clamp(1.4rem,3vw,1.9rem);
+    color:var(--ink);
+    margin:0 0 1.4rem;
+    border-left:6px solid var(--dusk);
+    padding-left:.7rem;
+  }
+  h3{
+    color:var(--bronze-deep);
+    font-size:1.15rem;
+    margin:2rem 0 .8rem;
+  }
+  section.alt h3{color:#d3ab6f;}
+  p{margin:0 0 1.1rem; color:var(--ink-soft);}
+
+  figure{margin:2rem 0;}
+  figure img{
+    width:100%;
+    border-radius:10px;
+    display:block;
+    box-shadow:0 12px 32px rgba(0,0,0,.25);
+  }
+  figcaption{
+    font-size:.82rem;
+    color:var(--granite-mid);
+    margin-top:.6rem;
+    text-align:center;
+  }
+  section.alt figcaption{color:#a9a496;}
+
+  .axis{
+    display:flex;
+    flex-direction:column;
+    gap:0;
+    margin:2rem 0;
+    border-left:3px solid var(--dusk);
+    padding-left:1.5rem;
+  }
+  .axis-step{
+    position:relative;
+    padding:0 0 2rem 1.2rem;
+  }
+  .axis-step::before{
+    content:'';
+    position:absolute;
+    left:-1.75rem;
+    top:.3rem;
+    width:12px;height:12px;
+    border-radius:50%;
+    background:var(--dusk);
+    border:2px solid var(--paper);
+  }
+  section.alt .axis-step::before{border-color:var(--granite-dark);}
+  .axis-step .num{
+    font-size:.75rem;
+    letter-spacing:.15em;
+    color:var(--bronze-deep);
+    font-weight:700;
+  }
+  section.alt .axis-step .num{color:#d3ab6f;}
+  .axis-step h4{margin:.3rem 0 .4rem; font-size:1.05rem; color:var(--ink);}
+  section.alt .axis-step h4{color:#f2efe8;}
+  .axis-step p{margin:0; font-size:.95rem;}
+
+  .fact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:1rem;
+    margin:2rem 0;
+  }
+  .fact{
+    background:rgba(255,255,255,.6);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:1rem 1.1rem;
+  }
+  section.alt .fact{background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.14);}
+  .fact .num{font-size:1.5rem;font-weight:700;color:var(--bronze-deep);}
+  section.alt .fact .num{color:#d3ab6f;}
+  .fact .label{font-size:.82rem;color:var(--ink-soft);}
+  section.alt .fact .label{color:#cfcabf;}
+
+  blockquote{
+    margin:2rem 0;
+    padding:1.2rem 1.5rem;
+    border-left:4px solid var(--dusk);
+    background:rgba(140,122,92,.08);
+    font-size:1.02rem;
+    color:var(--ink);
+    font-style:italic;
+  }
+  section.alt blockquote{background:rgba(255,255,255,.05); color:#f2efe8;}
+
+  .video-embed{
+    position:relative;
+    padding-top:56.25%;
+    margin:2rem 0;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 12px 32px rgba(0,0,0,.3);
+  }
+  .video-embed iframe{
+    position:absolute; top:0; left:0; width:100%; height:100%; border:0;
+  }
+
+  .visit-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:1.2rem;
+    margin:2rem 0;
+  }
+  .visit-card{
+    background:rgba(255,255,255,.6);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:1.2rem 1.3rem;
+  }
+  .visit-card h4{margin:0 0 .5rem; color:var(--bronze-deep); font-size:1rem;}
+  .visit-card p{margin:0; font-size:.92rem;}
+
+  .backlink{
+    display:inline-block;
+    margin-top:1rem;
+    padding:.6rem 1.2rem;
+    background:var(--granite-dark);
+    color:#f2efe8;
+    text-decoration:none;
+    border-radius:999px;
+    font-size:.88rem;
+    letter-spacing:.05em;
+  }
+  .backlink:hover{background:var(--dusk);}
+
+  footer{
+    background:var(--granite-dark);
+    color:#a9a496;
+    padding:3rem 0;
+    font-size:.8rem;
+  }
+  footer a{color:#d3ab6f;}
+  footer .wrap{display:flex;flex-direction:column;gap:.6rem;}
+
+  @media (prefers-color-scheme: dark){
+    body{background:#17181a;color:#e4e1d8;}
+    .disclaimer{background:#1f2022;color:#b9b5aa;}
+    .fact{background:rgba(255,255,255,.04);}
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">OSLO · FROGNER PARK · VIGELANDSPARKEN</div>
+    <h1>維吉蘭雕塑公園</h1>
+    <p class="sub">在石雕與無聲掙扎之間，通向人性的深處——古斯塔夫・維吉蘭用一生刻下的，是每個人都會經歷的出生、掙扎、相愛與死亡。</p>
+    <div class="meta">
+      <span>🇳🇴 挪威・奧斯陸</span>
+      <span>212 件雕塑</span>
+      <span>單一藝術家最大雕塑公園</span>
+      <span>免費開放</span>
+    </div>
+  </div>
+</div>
+
+<div class="disclaimer">
+  本頁為旅遊行前資料整理，內容參考公開資料與 <a href="https://youtu.be/pgwk9G-hF6c" target="_blank">YouTube 影片「奧斯陸維格蘭公園：在石雕與無聲掙扎之間，通向人性的深處」</a>編寫，圖片為 AI 生成示意圖，僅供行程規劃參考，正式資訊請以 <a href="https://vigeland.museum.no/en/vigelandpark" target="_blank">維吉蘭博物館官網</a>為準。
+</div>
+
+<nav class="toc">
+  <ul>
+    <li><a href="#intro">公園總覽</a></li>
+    <li><a href="#artist">藝術家生平</a></li>
+    <li><a href="#axis">850 公尺人生軸線</a></li>
+    <li><a href="#bridge">生命之橋</a></li>
+    <li><a href="#fountain">噴泉</a></li>
+    <li><a href="#monolith">生命之柱</a></li>
+    <li><a href="#wheel">生命之輪</a></li>
+    <li><a href="#video">影片導覽</a></li>
+    <li><a href="#visit">參觀資訊</a></li>
+  </ul>
+</nav>
+
+<section id="intro">
+  <div class="wrap">
+    <span class="tag">INTRODUCTION</span>
+    <h2>一座免費開放、由一個人刻了一輩子的公園</h2>
+    <p>維吉蘭雕塑公園（Vigelandsparken）位於奧斯陸 Frogner 區的 Frogner Park 內，是全世界規模最大、由單一藝術家獨力創作完成的雕塑公園。園內 212 件青銅與花崗岩雕塑，全部出自挪威雕塑家古斯塔夫・維吉蘭（Gustav Vigeland, 1869–1943）之手，主題只有一個：人的一生。</p>
+    <p>沒有門票、沒有圍牆、全年開放，公園本身就是一件巨大的公共藝術作品——你可以在晨跑的奧斯陸人、野餐的家庭、拍照的遊客之間，看見嬰兒、孩童、戀人、中年人與垂垂老者，被凝固在同一段 850 公尺長的石徑上。</p>
+    <div class="fact-grid">
+      <div class="fact"><div class="num">212</div><div class="label">件青銅／花崗岩雕塑</div></div>
+      <div class="fact"><div class="num">850m</div><div class="label">中軸線總長</div></div>
+      <div class="fact"><div class="num">1939–1949</div><div class="label">主體建造年代</div></div>
+      <div class="fact"><div class="num">17m</div><div class="label">生命之柱單塊花崗岩高度</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="artist" class="alt">
+  <div class="wrap">
+    <span class="tag">THE ARTIST</span>
+    <h2>古斯塔夫・維吉蘭：用畢生換一座公園的雕塑家</h2>
+    <p>維吉蘭出生於挪威南部小鎮曼達爾（Mandal），早年以修復中世紀教堂木雕與人像雕刻起家，逐漸建立起在挪威的雕塑家聲望。他構思這座公園的起點其實很早——1900 年，他就做出了「六個男人合力扛起水盆」的噴泉模型，也就是後來公園裡最核心的作品之一。</p>
+    <p>轉捩點發生在 1921 年：奧斯陸市政府提供他一間鄰近今日 Frogner Park 的寬敞工作室，交換條件是——他此後創作的所有作品，連同他手上已有的原始模型，都必須捐贈給這座城市。這場交易讓維吉蘭得以用接下來二十多年的時間，毫無後顧之憂地專注雕刻同一個主題：人的一生。</p>
+    <blockquote>公園主體工程集中在 1939 至 1949 年間完成，但最早的地標「主大門」早在 1926 年就已豎立。維吉蘭在 1943 年過世，終究沒能親眼看見公園全部完工——許多他多年前設計好的大門與雕像，是在他過世後才陸續豎立起來的。</blockquote>
+  </div>
+</section>
+
+<section id="axis">
+  <div class="wrap">
+    <span class="tag">THE AXIS OF LIFE</span>
+    <h2>一條 850 公尺的軸線，走完一生</h2>
+    <p>公園的雕塑並非隨意散置，而是沿著一條長達 850 公尺的中軸線，依序排列成五大區塊，從入口走到盡頭，等於走過一次完整的人生：</p>
+    <div class="axis">
+      <div class="axis-step">
+        <div class="num">01 · MAIN GATE</div>
+        <h4>主大門</h4>
+        <p>五座黑色鍛鐵大門立於花崗岩門柱之間，1926 年豎立，是整座公園最早完工的地標，也是踏入這趟「人生之旅」的起點。</p>
+      </div>
+      <div class="axis-step">
+        <div class="num">02 · THE BRIDGE</div>
+        <h4>生命之橋與兒童遊戲區</h4>
+        <p>石橋兩側欄杆上排列著 58 尊青銅雕像，呈現人與人之間最直接的情感互動；橋畔的兒童遊戲區則有 8 尊描繪孩童嬉戲的雕像，其中包含公園最著名的「憤怒的小孩」。</p>
+      </div>
+      <div class="axis-step">
+        <div class="num">03 · THE FOUNTAIN</div>
+        <h4>噴泉</h4>
+        <p>六位巨人合力扛起碩大水盆，水盆周圍環繞二十組描繪生命樹與人生各階段的群像，這也是維吉蘭最早構思（1900 年）的作品概念。</p>
+      </div>
+      <div class="axis-step">
+        <div class="num">04 · MONOLITH PLATEAU</div>
+        <h4>生命之柱平台</h4>
+        <p>全園制高點，中央矗立一根高 17 公尺、由單一花崗岩雕成的生命之柱，柱身糾纏著 121 個人形，周圍環繞 36 組描繪生老病死的雕像群與 8 座大門。</p>
+      </div>
+      <div class="axis-step">
+        <div class="num">05 · WHEEL OF LIFE</div>
+        <h4>生命之輪</h4>
+        <p>軸線的終點，一個圓形花崗岩浮雕，男女老幼手拉手環繞成圈，首尾相接、沒有起點也沒有終點，為這趟「人生之旅」畫下一個哲學意味濃厚的句點。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="bridge" class="alt">
+  <div class="wrap">
+    <span class="tag">THE BRIDGE</span>
+    <h2>生命之橋：58 尊雕像，58 種人際情感</h2>
+    <figure>
+      <img src="images/the-bridge_20260726_225841.png" alt="維吉蘭公園生命之橋">
+      <figcaption>生命之橋兩側欄杆上，排列著描繪各種人際互動的青銅雕像（示意圖）</figcaption>
+    </figure>
+    <p>橋是公園中軸線上第一段真正展開的雕塑群，58 尊青銅像沿著石橋欄杆一字排開，主題涵蓋擁抱、嬉戲、對峙、親暱與孤獨——幾乎是人與人之間所有可能的情感狀態，都被維吉蘭用最直白的肢體語言凝固下來。</p>
+    <h3>憤怒的小孩 Sinnataggen</h3>
+    <figure>
+      <img src="images/sinnataggen_20260726_230059.png" alt="憤怒的小孩 Sinnataggen 剪影示意">
+      <figcaption>「憤怒的小孩」是全園被摸得最發亮、也最多人排隊合照的一尊雕像（剪影示意圖）</figcaption>
+    </figure>
+    <p>橋畔兒童遊戲區裡，有一尊全公園最出名、也最受歡迎的雕像——「憤怒的小孩」（Sinnataggen）：一個孩子跺著腳、握緊拳頭、漲紅了臉放聲大哭。它之所以出名，除了情緒表現得極其生動之外，更因為多年來被無數遊客觸摸、合影，雕像表面早已被摸得油亮，成為公園裡最「上鏡」的角落，也是奧斯陸紀念品店裡最常見的圖案。</p>
+  </div>
+</section>
+
+<section id="fountain">
+  <div class="wrap">
+    <span class="tag">THE FOUNTAIN</span>
+    <h2>噴泉：公園最早的構想，1900 年就已成形</h2>
+    <figure>
+      <img src="images/the-fountain_20260726_230118.png" alt="維吉蘭公園噴泉剪影示意">
+      <figcaption>六位巨人合力扛起水盆的噴泉，是維吉蘭最早構思、也最具代表性的作品之一（剪影示意圖）</figcaption>
+    </figure>
+    <p>噴泉是整座公園的靈感起點——早在 1900 年，維吉蘭就做出了「六個男人合力扛起一個巨大水盆」的模型，這個構圖後來也真的成為公園裡最壯觀的水景之一。水盆邊緣與周圍花壇環繞著約二十組青銅群像，描繪從嬰兒到老年的生命階段，與「生命樹」的意象交織在一起，是整座公園主題的濃縮預告。</p>
+  </div>
+</section>
+
+<section id="monolith" class="alt">
+  <div class="wrap">
+    <span class="tag">MONOLITH PLATEAU</span>
+    <h2>生命之柱：121 個人形疊成一根 17 公尺的花崗岩柱</h2>
+    <figure>
+      <img src="images/hero-monolith_20260726_225754.png" alt="維吉蘭公園生命之柱夕陽景色">
+      <figcaption>黃昏時分的生命之柱平台，是公園海拔最高、視野最開闊的地方</figcaption>
+    </figure>
+    <p>公園的制高點是「生命之柱平台」，中央矗立著全公園最震撼的單一作品——一根高達 17 公尺、由整塊花崗岩雕成的生命之柱（The Monolith）。柱身上糾纏交疊著 121 個裸露的人形，彼此攀爬、依偎、掙扎著向上，被解讀為人類渴望超越、渴望與彼此連結、渴望觸及某種更高存在的隱喻。</p>
+    <p>柱子周圍的台階上，環繞著 36 組花崗岩群像與 8 座裝飾大門，分別描繪從出生、童年、青春期、成熟、衰老到死亡的各個階段——這裡是整座公園「人生主題」表現得最密集、也最具戲劇張力的地方，也是影片標題裡「無聲掙扎」最直接的視覺印證。</p>
+  </div>
+</section>
+
+<section id="wheel">
+  <div class="wrap">
+    <span class="tag">WHEEL OF LIFE</span>
+    <h2>生命之輪：沒有起點，也沒有終點</h2>
+    <figure>
+      <img src="images/wheel-of-life_20260726_225920.png" alt="維吉蘭公園生命之輪浮雕">
+      <figcaption>生命之輪浮雕，男女老幼手拉手環繞成圈，象徵生命循環不息</figcaption>
+    </figure>
+    <p>走完 850 公尺的軸線，最後迎接遊客的是「生命之輪」（Hjulet）——一個圓形花崗岩浮雕，男女老幼手拉手、身體彼此交疊纏繞，圍成一個完整無缺的圓。沒有明顯的起點，也沒有終點，正好呼應整座公園想傳達的核心思想：生命是一場不斷循環的旅程，出生與死亡、掙扎與相愛，最終都會回到同一個圓上。</p>
+  </div>
+</section>
+
+<section id="video" class="alt">
+  <div class="wrap">
+    <span class="tag">VIDEO</span>
+    <h2>影片導覽</h2>
+    <p>行前參考影片：《奧斯陸維格蘭公園：在石雕與無聲掙扎之間，通向人性的深處》。</p>
+    <div class="video-embed">
+      <iframe src="https://www.youtube.com/embed/pgwk9G-hF6c" title="奧斯陸維格蘭公園" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <span class="tag">VISITOR INFO</span>
+    <h2>參觀資訊</h2>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <h4>📍 位置</h4>
+        <p>位於 Frogner Park 內，奧斯陸市中心西側，步行、電車、公車皆可抵達。</p>
+      </div>
+      <div class="visit-card">
+        <h4>🎫 門票</h4>
+        <p>公園本身全年免費開放，無需門票；園內的維吉蘭博物館（Vigeland Museum）另需購票。</p>
+      </div>
+      <div class="visit-card">
+        <h4>🚋 交通</h4>
+        <p>搭乘電車 12 號線至 Vigelandsparken 站，或從市中心步行、騎自行車約 20–30 分鐘可達。</p>
+      </div>
+      <div class="visit-card">
+        <h4>⏱️ 建議停留</h4>
+        <p>慢慢走完整條中軸線、拍照與休息，建議安排 1–1.5 小時；喜歡攝影可預留更多時間等待光線。</p>
+      </div>
+      <div class="visit-card">
+        <h4>📷 拍照建議</h4>
+        <p>清晨或黃昏遊客較少、光線柔和，是拍攝生命之柱與各雕像群最理想的時段；「憤怒的小孩」前常有排隊人潮，建議避開中午時段。</p>
+      </div>
+      <div class="visit-card">
+        <h4>🧭 行程對應</h4>
+        <p>本站對應「北歐四國 15 日」行程 Day 7（奧斯陸），與奧斯陸市政廳、奧斯陸歌劇院同日安排。</p>
+      </div>
+    </div>
+    <a class="backlink" href="https://maskywg.github.io/northeurope/北歐四國" target="_blank">← 回到北歐四國 15 日行程主頁</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>資料整理自公開旅遊資訊與參考影片，僅供行前規劃使用，正式資訊請以 <a href="https://vigeland.museum.no/en/vigelandpark" target="_blank">維吉蘭博物館官網</a>、<a href="https://www.visitoslo.com/en/articles/vigeland-in-oslo/" target="_blank">Visit Oslo</a> 為準。</div>
+    <div>圖片為 AI 生成示意圖，非實景照片。</div>
+  </div>
+</footer>
+
+</body>
+</html>
