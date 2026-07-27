@@ -247,23 +247,24 @@
   }
 
   .gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    align-items:start;
-    gap:1.2rem 1.2rem;
-    row-gap:2rem;
+    column-count:1;
+    column-gap:1.2rem;
     margin:2rem 0;
   }
-  .gallery figure{margin:0;}
+  @media (min-width:640px){ .gallery{column-count:2;} }
+  @media (min-width:900px){ .gallery{column-count:3;} }
+  .gallery figure{
+    margin:0 0 1.2rem;
+    break-inside:avoid;
+    -webkit-column-break-inside:avoid;
+  }
   .gallery img{
     width:100%;
-    object-fit:cover;
-    aspect-ratio:4/3;
+    height:auto;
     border-radius:10px;
     display:block;
     box-shadow:0 8px 24px rgba(0,0,0,.22);
   }
-  .gallery.tall img{aspect-ratio:3/4;}
 
   .real-tag{
     display:inline-block;
