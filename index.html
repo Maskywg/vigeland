@@ -162,6 +162,23 @@
   }
   section.alt figcaption{color:#a9a496;}
 
+  .park-map{
+    margin:2rem 0 1rem;
+    background:rgba(140,122,92,.06);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:1.2rem 1rem .6rem;
+  }
+  .park-map svg{width:100%; height:auto; display:block;}
+  .park-map-caption{
+    text-align:center;
+    font-size:.75rem;
+    color:var(--granite-mid);
+    margin-top:.2rem;
+  }
+  section.alt .park-map{background:rgba(255,255,255,.05); border-color:rgba(255,255,255,.14);}
+  section.alt .park-map-caption{color:#a9a496;}
+
   .axis{
     display:flex;
     flex-direction:column;
@@ -421,6 +438,75 @@
     <span class="tag">THE AXIS OF LIFE</span>
     <h2>一條 850 公尺的軸線，走完一生</h2>
     <p>公園的雕塑並非隨意散置，而是沿著一條長達 850 公尺的中軸線，依序排列成五大區塊，從入口走到盡頭，等於走過一次完整的人生：</p>
+    <div class="park-map">
+      <svg viewBox="0 0 940 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="維吉蘭雕塑公園配置示意圖">
+        <defs>
+          <marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6">
+            <circle cx="5" cy="5" r="4" fill="var(--dusk)"/>
+          </marker>
+        </defs>
+        <!-- ground line -->
+        <line x1="60" y1="300" x2="880" y2="300" stroke="var(--line)" stroke-width="3"/>
+        <!-- rising path to monolith plateau, then down to wheel -->
+        <path d="M60,300 L280,300 L460,300 L630,190 L830,150" fill="none" stroke="var(--dusk)" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round"/>
+
+        <!-- 01 Main Gate -->
+        <g transform="translate(60,300)">
+          <rect x="-14" y="-70" width="10" height="70" fill="var(--granite-mid)"/>
+          <rect x="4" y="-70" width="10" height="70" fill="var(--granite-mid)"/>
+          <rect x="-18" y="-78" width="40" height="10" fill="var(--granite-dark)"/>
+          <circle r="6" fill="var(--dusk)"/>
+          <text x="0" y="30" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">01 主大門</text>
+          <text x="0" y="48" text-anchor="middle" font-size="10.5" fill="var(--ink-soft)">5 座鍛鐵大門</text>
+        </g>
+
+        <!-- 02 Bridge -->
+        <g transform="translate(280,300)">
+          <rect x="-70" y="-6" width="140" height="10" fill="var(--granite-light)"/>
+          <rect x="-70" y="4" width="6" height="18" fill="var(--granite-mid)"/>
+          <rect x="64" y="4" width="6" height="18" fill="var(--granite-mid)"/>
+          <circle cx="-40" cy="-14" r="5" fill="var(--bronze)"/>
+          <circle cx="-10" cy="-14" r="5" fill="var(--bronze)"/>
+          <circle cx="20" cy="-14" r="5" fill="var(--bronze)"/>
+          <circle cx="45" cy="-14" r="6" fill="var(--patina)"/>
+          <circle r="6" fill="var(--dusk)"/>
+          <text x="0" y="42" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">02 生命之橋</text>
+          <text x="0" y="60" text-anchor="middle" font-size="10.5" fill="var(--ink-soft)">58 尊青銅＋憤怒的小孩</text>
+        </g>
+
+        <!-- 03 Fountain -->
+        <g transform="translate(460,300)">
+          <path d="M-30,-14 L30,-14 L20,-30 L-20,-30 Z" fill="var(--granite-mid)"/>
+          <rect x="-6" y="-14" width="12" height="14" fill="var(--granite-dark)"/>
+          <path d="M-18,-30 q18,-22 36,0" fill="none" stroke="var(--patina)" stroke-width="2.5"/>
+          <circle r="6" fill="var(--dusk)"/>
+          <text x="0" y="34" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">03 噴泉</text>
+          <text x="0" y="52" text-anchor="middle" font-size="10.5" fill="var(--ink-soft)">六巨人＋20 組生命樹</text>
+        </g>
+
+        <!-- 04 Monolith Plateau (elevated) -->
+        <g transform="translate(630,190)">
+          <path d="M-60,110 L-30,20 L30,20 L60,110 Z" fill="var(--granite-light)" opacity="0.6"/>
+          <rect x="-7" y="-58" width="14" height="80" rx="3" fill="var(--granite-dark)"/>
+          <circle cx="-32" cy="18" r="5" fill="var(--bronze)"/>
+          <circle cx="32" cy="18" r="5" fill="var(--bronze)"/>
+          <circle cx="-18" cy="10" r="5" fill="var(--bronze)"/>
+          <circle cx="18" cy="10" r="5" fill="var(--bronze)"/>
+          <circle r="6" fill="var(--dusk)"/>
+          <text x="0" y="-70" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">04 生命之柱平台</text>
+          <text x="0" y="-53" text-anchor="middle" font-size="10.5" fill="var(--ink-soft)">17m 石柱＋36 組群像＋8 門</text>
+        </g>
+
+        <!-- 05 Wheel of Life -->
+        <g transform="translate(830,150)">
+          <path d="M-50,90 L-25,10 L25,10 L50,90 Z" fill="var(--granite-light)" opacity="0.45"/>
+          <circle r="15" fill="none" stroke="var(--patina)" stroke-width="5"/>
+          <text x="0" y="-28" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">05 生命之輪</text>
+          <text x="0" y="-11" text-anchor="middle" font-size="10.5" fill="var(--ink-soft)">青銅圓環，軸線終點</text>
+        </g>
+      </svg>
+      <div class="park-map-caption">示意圖：由入口（主大門）到最高點（生命之柱平台），最後下坡至生命之輪，非等比例縮放</div>
+    </div>
     <div class="axis">
       <div class="axis-step">
         <div class="num">01 · MAIN GATE</div>
